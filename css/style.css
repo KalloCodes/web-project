@@ -1,0 +1,177 @@
+:root {
+    background-color: var(--white);
+    font-family: 'Indie Flower', cursive;
+    max-width: 1000px;
+    margin: auto;
+    width: 80%;
+    --green: #1F7123;
+    --blue: #119AA9;
+    --orange: #F07A0C;
+    --grey: #666B73;
+    --white: #FeFFF9;
+    --foot-light: #63A7DB;
+    --foot-dark: #2560C4;
+    --line-height: 5px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*TODO: align whole page centrally in window when window width exceeds
+max width DONE*/
+
+#main {
+    padding: 5% 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    width: 65%;
+    border-style: dashed dashed none dashed;
+    border-radius: 25px 25px 0 0;
+    font-size: 200%;
+}
+
+nav {
+    width: 65%;
+    background-color: var(--grey);
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    font-size: 160%;
+    border-style: none solid none solid;
+}
+
+nav a {
+    padding: 10px;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#coding-button {
+    background-color: var(--blue);
+}
+
+#writing-button {
+    background-color: var(--orange);
+}
+
+#drawing-button {
+    background-color: var(--green);
+}
+
+#coding-button:hover, #writing-button:hover, #drawing-button:hover {
+    color: black;
+    background-color: var(--white);
+}
+
+/*TODO make the buttons change to white background and black text on
+hover, and make the secret text invisible (or the colour of the navbar)
+and change to white on hover
+HALF DONE can only get text or background colour to transform slowly
+on the transition property, not both at the same time?
+DONE need to define transition as applied to "all", not each property
+separately*/
+
+nav p {
+    margin: 10px;
+    margin-left: auto;
+    color: var(--grey);
+    transition: all 0.5s ease-in-out;
+}
+
+nav p:hover {
+    color: var(--white);
+}
+
+/*TODO Work out why the heck the navbar items are so wide
+and also automatically have a background on them as soon as
+they're changed from <a> and <p> elements to flex items
+FIXED defined min-width and background colour on the * selector
+instead of on :root*/
+
+section {
+    padding: 0% 0 0 0;
+    margin: 0;
+    text-align: center;
+    font-size: 160%;
+}
+
+#rule-1 {
+    border: none;
+    width: 55%;
+    height: var(--line-height);
+    margin: 5% 0 -1% 0;
+    background:
+        linear-gradient(to bottom left, var(--white) 50%, transparent 50%)
+        100% 0/var(--line-height) var(--line-height),
+        linear-gradient(to bottom right, var(--white) 50%,transparent 50%)
+        0 0/var(--line-height) var(--line-height),
+        var(--blue);
+    background-repeat: no-repeat;
+}
+
+#rule-2 {
+    border: none;
+    width: 75%;
+    height: var(--line-height);
+    margin: -1% 0 0 0;
+    background:
+        linear-gradient(to top left, var(--white) 50%, transparent 50%)
+        100% 0/var(--line-height) var(--line-height),
+        linear-gradient(to top right, var(--white) 50%,transparent 50%)
+        0 0/var(--line-height) var(--line-height),
+        var(--green);
+    background-repeat: no-repeat;
+}
+
+#rule-3 {
+    border: none;
+    width: 45%;
+    height: var(--line-height);
+    margin: 2% 0 0 0;
+    background:
+        linear-gradient(to top left, var(--white) 50%, transparent 50%)
+        100% 0/var(--line-height) var(--line-height),
+        linear-gradient(to top right, var(--white) 50%,transparent 50%)
+        0 0/var(--line-height) var(--line-height),
+        var(--orange);
+    background-repeat: no-repeat;
+}
+
+footer {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    font-size: 140%;
+    width:400px;
+    height: 10%;
+    background:
+        linear-gradient(0deg, var(--foot-dark) 0 90%,
+        var(--foot-light) 90% 100%);
+    background-repeat:no-repeat;
+}
+
+#foot-2 {
+    position: fixed;
+    bottom: 0px;
+    right: 350px;
+    width: 100px;
+    height: 10%;
+    background:
+        linear-gradient(to bottom right, gray 50%,
+        transparent 50%) 0 0/50px 50px,
+        linear-gradient(to bottom right, var(--foot-light) 50%,
+        transparent 50%) 0 0/60px 60px;
+    background-repeat: no-repeat;
+}
