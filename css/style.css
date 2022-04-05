@@ -149,29 +149,52 @@ section {
     background-repeat: no-repeat;
 }
 
+
+/*TODO the following all works brilliantly for one height of window. Either go back over and use measurements relative to the size of the div's themselves so everything stays in proportion as it scales, or better, work out what to define with fixed (px) measurements and keep the footer as a fixed size element?*/
+
 footer {
+    z-index: 2;
     position: fixed;
     right: 0px;
     bottom: 0px;
     font-size: 140%;
-    width:400px;
-    height: 10%;
+    width: 400px;
+    height: 65px;
     background:
         linear-gradient(0deg, var(--foot-dark) 0 90%,
         var(--foot-light) 90% 100%);
     background-repeat:no-repeat;
+    
+}
+
+#foot-1 {
+    z-index: 2;
+    clip-path:
+        polygon(
+            100% 0, 100% 0,
+            100% 20%, 100% 100%,
+            80% 100%, 20% 100%,
+            0 100%, 0 70%
+        );
+    position: fixed;
+    bottom: 0px;
+    right: 400px;
+    width: 50px;
+    height: 66px;
+    background: var(--foot-light);
+    background: linear-gradient(138deg, var(--foot-light) 48%, var(--foot-dark) 48%);
+    background-repeat: no-repeat;
 }
 
 #foot-2 {
+    z-index: 1;
     position: fixed;
+    left: 0;
     bottom: 0px;
-    right: 350px;
-    width: 100px;
-    height: 10%;
+    width: 100%;
+    height: 19px;
     background:
-        linear-gradient(to bottom right, gray 50%,
-        transparent 50%) 0 0/50px 50px,
-        linear-gradient(to bottom right, var(--foot-light) 50%,
-        transparent 50%) 0 0/60px 60px;
-    background-repeat: no-repeat;
+        linear-gradient(0deg, var(--foot-dark) 0 68%,
+        var(--foot-light) 68% 100%);
+    background-repeat:no-repeat;
 }
