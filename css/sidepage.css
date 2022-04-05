@@ -1,0 +1,28 @@
+:root {
+    background-color: var(--white);
+    font-family: 'Indie Flower', cursive;
+    max-width: 1000px;
+    margin: auto;
+    width: 80%;
+    --green: #1F7123;
+    --blue: #119AA9;
+    --orange: #F07A0C;
+    --grey: #666B73;
+    --white: #FeFFF9;
+    --foot-light: #63A7DB;
+    --foot-dark: #2560C4;
+    --line-height: 5px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#main {
+    padding: 5% 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
