@@ -5,6 +5,7 @@
     --lightblue: #A4D8DE;
     --blue: #119AA9;
     --orange: #F07A0C;
+    --offblack: #1A1A1A;
     --grey: #666B73;
     --white: #FeFFF9;
     --foot-light: #63A7DB;
@@ -63,6 +64,20 @@ h1 {
     padding: 4% 0 0 0;
 }
 
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+    margin: 5% 0 0 0;
+}
+
+p {
+    text-align: center;
+    color: var(--offblack);
+    font-size: 1.6rem;
+    margin: 0;
+}
+
 #topline {
     border: none;
     width: 65%;
@@ -76,6 +91,22 @@ h1 {
     background-repeat: no-repeat;
 }
 
+.above {
+    border: none;
+    width: 45%;
+    height: 8px;
+    clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
+    background-color: var(--green);
+}
+
+.below {
+    border: none;
+    width: 45%;
+    height: 8px;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    background-color: var(--green);
+}
+
 #bigflex {
     display: flex;
     flex-direction: column;
@@ -83,18 +114,6 @@ h1 {
     max-width: 1000px;
     border-style: dashed;
     border-color: #1F7123;
-}
-
-h2 {
-    font-size: 3rem;
-}
-
-a {
-    font-size: 3rem;
-    border-style: dashed;
-    border-color: red;
-    padding: 0 5% 0 5%;
-    margin: 1% 3% 1% 3%;
 }
 
 /*TODO fix this so that each horizontal line spaces evenly, and then any
@@ -110,6 +129,14 @@ works for this but goes weird when there's only two items on a line*/
     justify-content: center;
     border-style: dashed;
     border-color: blue;
+}
+
+a {
+    font-size: 3rem;
+    border-style: dashed;
+    border-color: red;
+    padding: 0 5% 0 5%;
+    margin: 1% 3% 1% 3%;
 }
 
 /*
