@@ -14,6 +14,11 @@
     --line-height: 5px;
 }
 
+@font-face {
+    font-family: "myFirstFont";
+    src: url("C:/Users/Desktop/Website/fonts/Harlow_Solid_Italic.ttf");
+}
+
 /*The following is important to get rid of automatic spacing
 between the body and any child elements*/
 
@@ -45,6 +50,10 @@ html {
     justify-content: center;
     background-color: var(--blue);
 }
+
+/*TODO sort a smart way for all the colours to be different across the pages - maybe do a dumb way first and work upwards once I have a working base level?*/
+
+/*TODO add a back / home button in the top-left of the topper? Make it cute too*/
 
 header {
     background-color: white;
@@ -128,7 +137,7 @@ works for this but goes weird when there's only two items on a line*/
 .smallflex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     /*border-style: dashed;
     border-color: blue;*/
 }
@@ -172,7 +181,11 @@ footer {
         linear-gradient(0deg, var(--foot-dark) 0 90%,
         var(--foot-light) 90% 100%);
     background-repeat:no-repeat;
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
 }
 
 #foot-1 {
@@ -205,4 +218,25 @@ footer {
         linear-gradient(0deg, var(--foot-dark) 0 68%,
         var(--foot-light) 68% 100%);
     background-repeat:no-repeat;
+}
+
+#foot-text {
+    color: #FeFFF9;
+    font-size: 2rem;
+}
+
+#d-button {
+    background-color: #404DED;
+    border-color: #FFFFFF #22272A #22272A #FFFFFF;
+    font-size: 1.8rem;
+    color:#FeFFF9;
+    box-shadow: none;
+}
+
+#g-button {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF #24282E #24282E #FFFFFF;
+    font-size: 1.8rem;
+    color: var(--offblack);
+    box-shadow: none;
 }
