@@ -1,0 +1,261 @@
+:root {
+    background-color: var(--white);
+    font-family: 'Indie Flower', cursive;
+    --lightgreen: #509953;
+    --green: #1F7123;
+    --lightblue: #A4D8DE;
+    --blue: #119AA9;
+    --lightorange: #FAA75A;
+    --orange: #F07A0C;
+    --offblack: #1A1A1A;
+    --darkgrey: #4F4A5E;
+    --grey: #666B73;
+    --white: #FeFFF9;
+    --foot-light: #63A7DB;
+    --foot-dark: #2560C4;
+    --line-height: 5px;
+}
+
+@font-face {
+    font-family: "myFirstFont";
+    src: url("C:/Users/Desktop/Website/fonts/Harlow_Solid_Italic.ttf");
+}
+
+/*The following is important to get rid of automatic spacing
+between the body and any child elements*/
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border-style: dashed;
+    border-color: #F07A0C;*/
+}
+
+#topper {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lightorange);
+}
+
+/*TODO sort a smart way for all the colours to be different across the pages - maybe do a dumb way first and work upwards once I have a working base level?*/
+
+/*TODO add a back / home button in the top-left of the topper? Make it cute too*/
+
+header {
+    background-color: white;
+    text-align: center;
+    margin: 5% 0 0 0;
+    width: 45%;
+    border-style: dashed dashed none dashed;
+    border-radius: 25px 25px 0 0;
+    font-size: 200%;
+}
+
+#lightblue {
+    background-color: var(--lightblue);
+}
+
+h1 {
+    font-size: 3.5rem;
+    padding: 4% 0 0 0;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+    margin: 5% 0 0 0;
+}
+
+p {
+    text-align: center;
+    color: var(--offblack);
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+#topline {
+    border: none;
+    width: 65%;
+    height: var(--line-height);
+    background:
+        linear-gradient(to top left, var(--white) 50%, transparent 50%)
+        100% 0/var(--line-height) var(--line-height),
+        linear-gradient(to top right, var(--white) 50%,transparent 50%)
+        0 0/var(--line-height) var(--line-height),
+        var(--grey);
+    background-repeat: no-repeat;
+}
+
+.above {
+    border: none;
+    width: 60%;
+    height: 8px;
+    clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
+    background-color: var(--blue);
+}
+
+.below {
+    border: none;
+    width: 60%;
+    margin-top: 3%;
+    height: 8px;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    background-color: var(--blue);
+}
+
+#bigflex {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 1000px;
+    /*border-style: dashed;
+    border-color: #1F7123;*/
+}
+
+/*TODO fix this so that each horizontal line spaces evenly, and then any
+overspill drops to the next line. Maybe think some more about this to
+work. Justifying to the center works but in the case of three on the top
+line and one on the line beneath, I'd like the individual one on the line
+beneath to line up under the leftmost item on the top line. Space-between
+works for this but goes weird when there's only two items on a line*/
+
+.smallflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /*border-style: dashed;
+    border-color: blue;*/
+}
+
+a {
+    text-align: center;
+    color: var(--offblack);
+    font-size: 3rem;
+    border-style: dashed;
+    border-color: red;
+    padding: 0 5% 0 5%;
+    margin: 6% 3% 6% 3%;
+    /*One button version to follow*/
+    background-color: var(--lightgreen);
+    border-color: white grey grey white;
+    border-style: solid;
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2% 3% 0 0;
+}
+
+a:visited {
+    color: var(--darkgrey)
+}
+
+/*
+.lightblue {
+    background-color: var(--lightblue);
+}
+*/
+
+footer {
+    z-index: 2;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    font-size: 140%;
+    width: 400px;
+    height: 65px;
+    background:
+        linear-gradient(0deg, var(--foot-dark) 0 90%,
+        var(--foot-light) 90% 100%);
+    background-repeat:no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+#foot-1 {
+    z-index: 2;
+    clip-path:
+        polygon(
+            100% 0, 100% 0,
+            100% 20%, 100% 100%,
+            80% 100%, 20% 100%,
+            0 100%, 0 70%
+        );
+    position: fixed;
+    bottom: 0px;
+    right: 400px;
+    width: 50px;
+    height: 66px;
+    background: var(--foot-light);
+    background: linear-gradient(138deg, var(--foot-light) 48%, var(--foot-dark) 48%);
+    background-repeat: no-repeat;
+}
+
+#foot-2 {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 19px;
+    background:
+        linear-gradient(0deg, var(--foot-dark) 0 68%,
+        var(--foot-light) 68% 100%);
+    background-repeat:no-repeat;
+}
+
+#foot-text {
+    color: #FeFFF9;
+    font-size: 2rem;
+}
+
+#d-button {
+    background-color: #404DED;
+    border-color: #FFFFFF #22272A #22272A #FFFFFF;
+    font-size: 1.8rem;
+    color:#FeFFF9;
+    box-shadow: none;
+}
+
+#g-button {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF #24282E #24282E #FFFFFF;
+    font-size: 1.8rem;
+    color: var(--offblack);
+    box-shadow: none;
+}
+
+#backdiv {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+#backbutton {
+    font-size: 2rem;
+    padding: 5px;
+    margin: 0;
+    color: black;
+    background-color: var(--foot-light);
+    border-color: white var(--foot-dark) var(--foot-dark) white;
+    border-style: solid;
+    box-shadow: none;
+}
