@@ -268,3 +268,41 @@ footer {
     border-style: solid;
     box-shadow: none;
 }
+
+@media only screen and (max-width: 500px) {
+    :root {
+        background-color: lightblue;
+        padding-bottom: 16%;
+    }
+
+    #backbutton {
+        visibility: hidden;
+    }
+    
+    #backbutton::after {
+        visibility: visible;
+        content: "Back";
+        font-size: 2rem;
+        padding: 5px;
+        margin: 0;
+        color: black;
+        background-color: var(--foot-light);
+        border-color: white var(--foot-dark) var(--foot-dark) white;
+        border-style: solid;
+        box-shadow: none;
+        position: absolute;
+        left: 0px;
+        top: -8px;
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    :root {
+        background-color: blue;
+    }
+
+    footer {
+        width: 100%;
+    }
+}
