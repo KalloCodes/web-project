@@ -262,7 +262,6 @@ footer {
 
 @media only screen and (max-width: 500px) {
     :root {
-        background-color: lightblue;
         padding-bottom: 16%;
     }
 
