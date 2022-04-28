@@ -1,9 +1,9 @@
 :root {
     background-color: var(--white);
     font-family: 'Indie Flower', cursive;
+    width: 80%;
     max-width: 1000px;
     margin: auto;
-    width: 80%;
     --green: #1F7123;
     --blue: #119AA9;
     --orange: #F07A0C;
@@ -22,35 +22,33 @@ html {
 max width DONE*/
 
 #main {
-    padding: 5% 0 0 0;
+    padding-top: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 header {
     background-color: white;
-    text-align: center;
     width: 65%;
+    font-size: 200%;
+    text-align: center;
     border-style: dashed dashed none dashed;
     border-radius: 25px 25px 0 0;
-    font-size: 200%;
 }
 
 nav {
-    width: 65%;
     background-color: var(--grey);
+    width: 65%;
     display: flex;
-    align-items: stretch;
     justify-content: flex-start;
     font-size: 160%;
-    border-style: none solid none solid;
+    border-style: none solid;
 }
 
 nav a {
-    padding: 10px;
     color: var(--white);
+    padding: 10px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -82,14 +80,14 @@ on the transition property, not both at the same time?
 DONE need to define transition as applied to "all", not each property
 separately*/
 
-nav p {
+#secret {
+    color: var(--grey);
     margin: 10px;
     margin-left: auto;
-    color: var(--grey);
     transition: all 0.5s ease-in-out;
 }
 
-nav p:hover {
+#secret:hover {
     color: var(--white);
 }
 
@@ -100,10 +98,11 @@ FIXED defined min-width and background colour on the * selector
 instead of on :root*/
 
 section {
-    padding: 0% 0 0 0;
+    padding: 0;
     margin: 0;
     text-align: center;
     font-size: 160%;
+    max-width: 800px;
 }
 
 #rule-1 {
@@ -134,7 +133,8 @@ section {
 }
 
 
-/*TODO the following all works brilliantly for one height of window. Either go back over and use measurements relative to the size of the div's themselves so everything stays in proportion as it scales, or better, work out what to define with fixed (px) measurements and keep the footer as a fixed size element?*/
+/*TODO the following all works brilliantly for one height of window. Either go back over and use measurements relative to the size of the div's themselves so everything stays in proportion as it scales, or better, work out what to define with fixed (px) measurements and keep the footer as a fixed size element?
+DONE works now*/
 
 footer {
     z-index: 2;
