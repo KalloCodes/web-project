@@ -1,0 +1,20 @@
+:root {
+    --lightgreen: #509953;
+    --green: #1F7123;
+    --lightblue: #4BBFCC;
+    --blue: #119AA9;
+    --lightorange: #FAA75A;
+    --orange: #F07A0C;
+}
+
+#topper {
+    background-color: var(--lightgreen);
+}
+
+hr {
+    background-color: var(--orange);
+}
+
+a {
+    background-color: var(--lightblue);
+}

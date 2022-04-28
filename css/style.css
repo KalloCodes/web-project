@@ -232,12 +232,12 @@ footer {
 @media only screen and (max-width: 392px) {
     nav {
         flex-wrap: wrap;
-        text-align: center;
         flex-grow: 1;
     }
 
     .button {
         width: 100%;
+        justify-content: center;
     }
 
     #secret {

@@ -1,6 +1,7 @@
 :root {
     background-color: var(--white);
     font-family: 'Indie Flower', cursive;
+    padding-bottom: 8%;
     --lightgreen: #509953;
     --green: #1F7123;
     --lightblue: #4BBFCC;
@@ -14,11 +15,6 @@
     --foot-light: #63A7DB;
     --foot-dark: #2560C4;
     --line-height: 5px;
-}
-
-@font-face {
-    font-family: "myFirstFont";
-    src: url("C:/Users/Desktop/Website/fonts/Harlow_Solid_Italic.ttf");
 }
 
 /*The following is important to get rid of automatic spacing
@@ -39,8 +35,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border-style: dashed;
-    border-color: #F07A0C;*/
 }
 
 #topper {
@@ -49,31 +43,26 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: var(--lightgreen);
 }
 
 /*TODO sort a smart way for all the colours to be different across the pages - maybe do a dumb way first and work upwards once I have a working base level?*/
 
-/*TODO add a back / home button in the top-left of the topper? Make it cute too*/
+/*TODO add a back / home button in the top-left of the topper? Make it cute too
+DONE*/
 
 header {
     background-color: white;
     text-align: center;
-    margin: 5% 0 0 0;
+    margin-top: 5%;
     width: 45%;
     border-style: dashed dashed none dashed;
     border-radius: 25px 25px 0 0;
     font-size: 200%;
 }
 
-#lightblue {
-    background-color: var(--lightblue);
-}
-
 h1 {
     font-size: 3.5rem;
-    padding: 4% 0 0 0;
+    padding-top: 4%;
 }
 
 h2 {
@@ -108,7 +97,6 @@ p {
     width: 60%;
     height: 8px;
     clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
-    background-color: var(--orange);
 }
 
 .below {
@@ -117,7 +105,6 @@ p {
     margin-top: 3%;
     height: 8px;
     clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
-    background-color: var(--orange);
 }
 
 #bigflex {
@@ -125,8 +112,6 @@ p {
     flex-direction: column;
     width: 50%;
     max-width: 1000px;
-    /*border-style: dashed;
-    border-color: #1F7123;*/
 }
 
 /*TODO fix this so that each horizontal line spaces evenly, and then any
@@ -140,36 +125,33 @@ works for this but goes weird when there's only two items on a line*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /*border-style: dashed;
-    border-color: blue;*/
 }
 
 a {
     text-align: center;
     color: var(--offblack);
     font-size: 3rem;
-    border-style: dashed;
-    border-color: red;
-    padding: 0 5% 0 5%;
-    margin: 6% 3% 6% 3%;
+    padding: 0 5%;
+    margin: 2% 3% 0 0;
     /*One button version to follow*/
-    background-color: var(--lightblue);
     border-color: white grey grey white;
     border-style: solid;
     box-shadow: 4px 8px rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 2% 3% 0 0;
 }
 
 a:visited {
     color: var(--darkgrey)
 }
 
-/*
-.lightblue {
-    background-color: var(--lightblue);
+.plainlink {
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-style: none;
+    box-shadow: none;
 }
-*/
 
 footer {
     z-index: 2;
@@ -243,15 +225,6 @@ footer {
     box-shadow: none;
 }
 
-.plainlink {
-    font-size: 1.6rem;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    border-style: none;
-    box-shadow: none;
-}
-
 #backdiv {
     position: absolute;
     top: 20px;
@@ -274,6 +247,8 @@ footer {
         padding-bottom: 16%;
     }
 
+    /*The bit below replaces the back button with a smaller version
+    on smaller viewports*/
     #backbutton {
         visibility: hidden;
     }
@@ -296,6 +271,7 @@ footer {
     }
 }
 
+/*So that the footer isn't too big on mobile devices*/
 @media only screen and (max-width: 400px) {
     footer {
         width: 100%;
