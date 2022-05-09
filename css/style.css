@@ -1,6 +1,6 @@
 :root {
     background-color: var(--white);
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Indie Flower', Verdana, sans-serif;
     width: 80%;
     max-width: 1000px;
     margin: auto;
@@ -31,7 +31,7 @@ max width DONE*/
 header {
     background-color: white;
     width: 65%;
-    font-size: 200%;
+    font-size: 2rem;
     text-align: center;
     border-style: dashed dashed none dashed;
     border-radius: 25px 25px 0 0;
@@ -103,6 +103,14 @@ section {
     text-align: center;
     font-size: 160%;
     max-width: 800px;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+section p {
+    font-family: Verdana, sans-serif;
 }
 
 #rule-1 {
